@@ -1,15 +1,17 @@
 from fastapi import FastAPI, File, UploadFile
 import uuid
 import os
+import sys
+import datetime
 from keras.models import load_model
 import tensorflow as tf
-import sys
+
 
 app = FastAPI()
 
 @app.get("/api/ping")
 async def root():
-    return {"message": "pong"}
+    return {"message": "pong", "timestamp": f'{datetime.datetime.now().isoformat()}'}
 
 @app.post("/api/predict")
 async def predict(file: UploadFile = File(...)):
