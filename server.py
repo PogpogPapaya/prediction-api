@@ -6,7 +6,7 @@ import datetime
 from keras.models import load_model
 import tensorflow as tf
 
-
+my_model = load_model('./model-large.h5')
 app = FastAPI()
 
 @app.get("/api/ping")
@@ -22,8 +22,6 @@ async def predict(file: UploadFile = File(...)):
     f = open(f'{imgPath}', 'wb')
     content = await file.read()
     f.write(content)
-
-    my_model = load_model('./model-large.h5')
 
     classList = ['medium', 'ripe', 'unripe']
 
