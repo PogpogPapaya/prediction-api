@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z\004.;pb',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x18prediction-service.proto\"\"\n\x11PredictionRequest\x12\r\n\x05image\x18\x01 \x01(\x0c\"7\n\x12PredictionResponse\x12\r\n\x05label\x18\x01 \x01(\t\x12\x12\n\nconfidence\x18\x02 \x01(\t2C\n\rPapayaService\x12\x32\n\x07Predict\x12\x12.PredictionRequest\x1a\x13.PredictionResponseB\x06Z\x04.;pbb\x06proto3'
+  serialized_pb=b'\n\x18prediction-service.proto\"\"\n\x11PredictionRequest\x12\r\n\x05image\x18\x01 \x01(\x0c\"7\n\x12PredictionResponse\x12\r\n\x05label\x18\x01 \x01(\t\x12\x12\n\nconfidence\x18\x02 \x01(\x01\x32\x43\n\rPapayaService\x12\x32\n\x07Predict\x12\x12.PredictionRequest\x1a\x13.PredictionResponseB\x06Z\x04.;pbb\x06proto3'
 )
 
 
@@ -74,8 +74,8 @@ _PREDICTIONRESPONSE = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='confidence', full_name='PredictionResponse.confidence', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
+      number=2, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),

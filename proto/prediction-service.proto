@@ -11,5 +11,5 @@ message PredictionRequest {
 
 message PredictionResponse {
     string label = 1;
-    string confidence = 2;
+    double confidence = 2;
 }
